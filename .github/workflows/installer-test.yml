@@ -22,10 +22,10 @@ jobs:
                   sudo apt-get install build-essential libpython3-dev libdbus-1-dev
             - name: Run installer
               run: |
-                set -euxo pipefail
-                wget -O /tmp/installer.py "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=523&device=linux&generatedfor=user&openroaming=0"
-                mkdir -p ~/.virtualenvs
-                python3 -m venv ~/.virtualenvs/eduroam-installer
-                source ~/.virtualenvs/eduroam-installer/bin/activate
-                python3 -m pip install dbus-python
-                python3 /tmp/installer.py --username testuser --password testpassword
+                  set -euxo pipefail
+                  wget -O /tmp/installer.py "https://cat.eduroam.org/user/API.php?action=downloadInstaller&lang=en&profile=523&device=linux&generatedfor=user&openroaming=0"
+                  mkdir -p ~/.virtualenvs
+                  python3 -m venv ~/.virtualenvs/eduroam-installer
+                  source ~/.virtualenvs/eduroam-installer/bin/activate
+                  python3 -m pip install dbus-python
+                  python3 /tmp/installer.py --username testuser --password testpassword
