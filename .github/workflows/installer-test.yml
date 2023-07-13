@@ -25,4 +25,4 @@ jobs:
                 python3 -m venv ~/.virtualenvs/eduroam-installer
                 source ~/.virtualenvs/eduroam-installer/bin/activate
                 python3 -m pip install dbus-python
-                python3 /tmp/installer.py
+                python3 /tmp/installer.py --username testuser --password testpassword
